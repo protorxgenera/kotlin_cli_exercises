@@ -3,16 +3,16 @@ fun main() {
 	/**
 	 * User input
 	 */
-	// greeting()
-	// inputHandlerLambda(userInput(), listGenerator())
+	 greeting()
+	 inputHandlerLambda(userInput(), listGenerator())
 
 	/**
-	 * Test with all numbers
+	 * Test with all valid numbers
 	 */
-	val list = listGenerator()
-	for (i in list) {
-		inputHandlerLambda(i, listGenerator())
-	}
+//	val list = listGenerator()
+//	for (i in list) {
+//		inputHandlerLambda(i, listGenerator())
+//	}
 }
 
 fun greeting() {
@@ -65,13 +65,17 @@ fun userInput(): Int? {
 			print("Your input is not a number, try again > ")
 			continue
 		}
-
-		if ((input % 2) == 0) {
-			inputIsEven = true
-			continue
+		if (input < 0 || input > 100) {
+			print("Your number is not in the given range, please try again > ")
 		} else {
-			print("Your number is not even, please try again > ")
+			if ((input % 2) == 0) {
+				inputIsEven = true
+				continue
+			} else {
+				print("Your number is not even, please try again > ")
+			}
 		}
+
 	}
 	return input
 }
