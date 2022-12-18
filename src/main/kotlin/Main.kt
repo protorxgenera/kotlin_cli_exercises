@@ -29,6 +29,8 @@ fun main() {
 	// println("New employee has ${john.kids} kids")
 	// debugging()
 
+	println(simpleLambdaExpression(2, 5))
+
 }
 
 // defining and using variables
@@ -196,6 +198,9 @@ fun functionWithReturn(): String {
 fun functionWithArgsAndReturn(birthYear: Int, currentYear: Int = 2020): Int {
 	return currentYear - birthYear
 }
+
+// simple lambda expression
+val simpleLambdaExpression: (Int, Int) -> Int = {a: Int, b: Int -> a + b}
 
 fun nullability() {
 
